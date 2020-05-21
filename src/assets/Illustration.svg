@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="789px" height="900px" viewBox="0 0 789 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 58 (101010) - https://sketch.com -->
+    <title>2DA959E0-C0D0-405C-AB59-7EC465203956</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="33.6363157%" y1="50%" x2="72.8641262%" y2="19.3846857%" id="linearGradient-1">
+            <stop stop-color="#3E1294" offset="0%"></stop>
+            <stop stop-color="#7626DF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="42.2989979%" y1="50%" x2="54.126089%" y2="65.2752837%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.708615603" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-Up" transform="translate(-651.000000, 0.000000)">
+            <g id="Illustration" transform="translate(610.000000, -73.000000)">
+                <path d="M0,0 L834,58.6337626 L834,639.534871 C716.452432,629.543124 593.338948,675.530207 464.659547,777.49612 C335.980146,879.462033 389.128669,983.29666 624.105118,1089 L0,0 Z" id="01" fill="url(#linearGradient-1)"></path>
+                <polygon id="02" fill="url(#linearGradient-2)" points="451 788 834 59 834 418.931402"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

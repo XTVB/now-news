@@ -1,0 +1,94 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "now-news": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "polyfills": "src/polyfills.ts",
+            "assets": ["src/assets"],
+            "styles": ["src/sass/styles.scss"],
+            "scripts": [
+            ]
+          },
+          "configurations": {
+            "local-staging": {
+            },
+            "prod": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "now-news:build"
+          },
+          "configurations": {
+            "local-staging": {
+              "browserTarget": "now-news:build:local-staging"
+            },
+            "production": {
+              "browserTarget": "now-news:build:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "now-news",
+  "schematics": {
+    "@schematics/angular:class": {
+      "spec": true
+    },
+    "@schematics/angular:component": {
+      "inlineStyle": false,
+      "inlineTemplate": false,
+      "flat": false,
+      "changeDetection": "Default",
+      "spec": true,
+      "viewEncapsulation": "Emulated",
+      "prefix": "now",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "flat": true,
+      "spec": true,
+      "prefix": "now"
+    },
+    "@schematics/angular:guard": {
+      "flat": true,
+      "spec": true
+    },
+    "@schematics/angular:module": {
+      "flat": false,
+      "spec": false
+    },
+    "@schematics/angular:pipe": {
+      "flat": true,
+      "spec": true
+    },
+    "@schematics/angular:service": {
+      "flat": true,
+      "spec": true
+    }
+  }
+}
