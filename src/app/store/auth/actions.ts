@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { UrlTree, NavigationExtras } from '@angular/router';
 
 // interface UserLoginPayload {
 //   // user: Oidc.User;
@@ -25,4 +26,10 @@ export class UserLogout implements Action {
   public readonly type = '[Auth] User Logout';
 
   constructor() {}
+}
+
+export class AccessDeniedAction implements Action {
+  public readonly type = '[Auth] Access Denied';
+
+  constructor(public readonly url: string) {}
 }

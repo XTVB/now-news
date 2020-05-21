@@ -9,3 +9,9 @@
     font-family: "Maison Neue Book";
     src: url(#{$fonts-path}/MaisonNeue-Book.otf);
 }
+
+@font-face {
+    font-family: "Eina 03 SemiBold"; 
+    src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.eot"); 
+    src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.woff2") format("woff2");
+}

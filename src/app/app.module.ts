@@ -6,16 +6,25 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { AuthEffects } from './store/auth/effects';
 import { rootReducer } from './store/reducer';
+import { UnAuthedPageComponent } from './un-authed-page/un-authed-page.component';
+import { TitleComponent } from './un-authed-page/title/title.component';
+import { NotFoundComponent } from './un-authed-page/not-found/not-found.component';
+import { LoginComponent } from './un-authed-page/login/login.component';
+import { SignupComponent } from './un-authed-page/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    LogInPageComponent,
-    MainPageComponent
+    UnAuthedPageComponent,
+    MainPageComponent,
+    TitleComponent,
+    NotFoundComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +32,7 @@ import { rootReducer } from './store/reducer';
     AppRoutingModule,
     StoreModule.forRoot(rootReducer),
     EffectsModule.forRoot([
+      AuthEffects
     ])
   ],
   providers: [],

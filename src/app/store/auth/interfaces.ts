@@ -6,10 +6,7 @@ export interface LoggedOutUserState {
   loggedIn: false;
   user?: undefined;
 }
-export interface UnknownUserState {
-  loggedIn: undefined;
-}
-export type AuthState = LoggedInUserState | LoggedOutUserState | UnknownUserState;
+export type AuthState = LoggedInUserState | LoggedOutUserState;
 
 // export interface UserProfile {
 //   account_code: string;

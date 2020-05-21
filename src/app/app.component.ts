@@ -9,9 +9,9 @@ import { RootState } from './store/interfaces';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private readonly loggedIn$ = this.store.pipe(
-    select(getLoggedIn)
-  );
+  // private readonly loggedIn$ = this.store.pipe(
+  //   select(getLoggedIn)
+  // );
 
   constructor(private readonly store: Store<RootState>) {
   }

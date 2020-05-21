@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Actions, Effect } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { RootState } from 'app/store/interfaces';
-import { getPayloadForInstance } from 'app/store/utils';
+import { getPayloadForInstance, instanceOf } from 'app/store/utils';
 import { from } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import * as actions from './actions';
@@ -27,16 +28,27 @@ export class AuthEffects {
     map(x => console.log(x)
 
     ),
-    catchError(err => {
-      console.log(err);
+    catchError(createUnexpectedError)
+  );
 
-      return [];
-    })
+  @Effect()
+  public readonly accessDeniedHandler = this.actions$.pipe(
+    instanceOf(actions.AccessDeniedAction),
+    map(() =>  this.router.navigateByUrl('/login')),
+    catchError(createUnexpectedError)
   );
 
   constructor(
     private readonly actions$: Actions,
+    private readonly router: Router,
     store: Store<RootState>
   ) {
   }
+}
+
+// TODO
+function createUnexpectedError(err: any) {
+  console.log(err);
+
+  return [];
 }

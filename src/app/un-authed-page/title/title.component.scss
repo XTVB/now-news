@@ -1,0 +1,39 @@
+@import 'src/sass/mixins';
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 31px;
+    margin-top: get-vh(38px);
+}
+
+.title {
+    font-family: "Eina 03 SemiBold";
+    color: #3C3E46;
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: -1.7px;
+    line-height: 64px;
+
+    height: 64px;
+    width: 255px;
+
+    margin-top: get-vh(32px);
+}
+
+.sub-title {
+    color: #3C3E46;
+    font-family: "Maison Neue Book";
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 24px;
+
+    height: 48px;
+    width: 214px;
+
+    margin-top: get-vh(9px);
+}
