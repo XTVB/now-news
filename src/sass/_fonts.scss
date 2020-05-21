@@ -1,0 +1,11 @@
+@import './variables';
+
+@font-face {
+    font-family: "Maison Neue Medium";
+    src: url(#{$fonts-path}/MaisonNeue-Medium.otf);
+}
+
+@font-face {
+    font-family: "Maison Neue Book";
+    src: url(#{$fonts-path}/MaisonNeue-Book.otf);
+}

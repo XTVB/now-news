@@ -1,0 +1,56 @@
+@import 'src/sass/mixins';
+@import 'src/sass/variables';
+
+:host {
+    display: flex;
+    height: 100%;
+}
+
+.footer-links, .social-links, .copyright {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-links, .copyright {
+    font-family: Maison Neue Book;
+    font-size: 16px;
+    color: #3C3E46;
+    opacity: 0.4;
+    line-height: 21px;
+}
+
+.footer-links {
+    margin-left: get-vw(165px);
+    
+    a {
+        // have to overwrite native anchor behaviour
+        color: #3C3E46; 
+        text-decoration: none;
+
+        &:not(:first-child) {
+            margin-left: get-vw(40px);
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.social-links {
+    margin-left: get-vw(155px);
+
+    a:not(:first-child) {
+        margin-left: get-vw(20px);
+    }
+
+    img {
+        height: 22px;
+        vertical-align: middle;
+    }
+}
+
+.copyright {
+    margin-left: get-vw(69px);
+}

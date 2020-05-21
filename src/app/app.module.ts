@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
-import { rootReducer } from './store/reducer';
 import { MainPageComponent } from './main-page/main-page.component';
+import { rootReducer } from './store/reducer';
 
 @NgModule({
   declarations: [
