@@ -11,5 +11,4 @@ export class UnAuthedPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

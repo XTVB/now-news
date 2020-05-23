@@ -6,13 +6,12 @@
     background-repeat: no-repeat;
     background-position: right;
     background-color: rgb(238, 238, 242);
-    width: 100%;
     height: 100%;
     display: flex;
 }
 
 .container {
-    // border: solid black 1px;
-    margin-left: get-vw(165px);
-    width: 360px;
+    background-color: rgb(238, 238, 242, 0.5);
+    padding-left: px-to-vw(165px);
+    width: px-to-vw(360px);
 }

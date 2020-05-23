@@ -5,35 +5,29 @@
     flex-direction: column;
 }
 
-img {
-    width: 31px;
-    margin-top: get-vh(38px);
+mat-icon {
+    height: px-to-vh(60px);
+    width: px-to-vw(31px);
+    margin-top: px-to-vh(38px);
 }
 
 .title {
     font-family: "Eina 03 SemiBold";
     color: #3C3E46;
-    font-size: 46px;
+    font-size: px-to-vh(46px);
     font-weight: 600;
     letter-spacing: -1.7px;
     line-height: 64px;
-
-    height: 64px;
-    width: 255px;
-
-    margin-top: get-vh(32px);
+    width: px-to-vw(255px);
+    margin-top: px-to-vh(32px);
 }
 
 .sub-title {
     color: #3C3E46;
     font-family: "Maison Neue Book";
-    font-size: 18px;
-    font-weight: 300;
+    font-size: px-to-vh(18px);
     letter-spacing: 0;
-    line-height: 24px;
-
-    height: 48px;
-    width: 214px;
-
-    margin-top: get-vh(9px);
+    line-height: px-to-vh(24px);
+    width: px-to-vw(214px);
+    margin-top: px-to-vh(9px);
 }

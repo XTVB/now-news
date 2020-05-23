@@ -1,4 +1,6 @@
-$footerHeight: 104px;
+@import 'src/sass/mixins';
+
+$footerHeight: px-to-vh(104px);
 
 #page-container {
     position: relative;

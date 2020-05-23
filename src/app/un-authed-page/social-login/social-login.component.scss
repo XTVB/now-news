@@ -1,0 +1,36 @@
+@import 'src/sass/mixins';
+
+:host {
+    display: flex;
+    flex-direction: column;
+
+    .login-button {
+        &:not(:last-child) {
+            margin-bottom: px-to-vh(10px);
+        }
+        
+        width: px-to-vw(350px);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        padding-top: px-to-vh(23px);
+        padding-bottom: px-to-vh(23px);
+        padding-left: px-to-vw(20px);
+
+        mat-icon {
+            height: px-to-vh(24px);
+            width: px-to-vw(23px);
+        }
+    
+        span {
+            margin-left: px-to-vw(13px);
+            color: #3C3E46;
+            font-family: "Maison Neue Medium";
+            font-size: px-to-vh(18px);
+            letter-spacing: 0;
+        }
+
+        
+    }
+}

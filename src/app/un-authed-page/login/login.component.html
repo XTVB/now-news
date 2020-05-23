@@ -1,4 +1,31 @@
 <now-title
+    class="title"
     [title]="'Welcome'"
-    [subTitle]="'Please login to use the service, or sign up if you don\'t have an account!'"
+    [subTitle]="'Please choose how you would like to log in!'"
 ></now-title>
+<now-social-login
+    class="social-login"
+></now-social-login>
+<form class="login-form" [formGroup]="filterForm" (ngSubmit)="submitForm()">
+    <span class="label">OR USE EMAIL INSTEAD</span>
+    <now-text-input
+        formControlName="username"
+        [label]="'Email Address'"
+        [svgIcon]="'mail'"
+    ></now-text-input>
+    <now-text-input
+        formControlName="password"
+        [label]="'Password'"
+        [svgIcon]="'lock'"
+        [hide]="true"
+    ></now-text-input>
+    <button 
+        mat-flat-button
+        class="login-button"
+        color="accent"
+        type="submit"
+    >
+        <span>Login</span>
+    </button>
+    <div class="sign-up-redirect">Don't have an account? <a routerLink="/signup">Signup</a></div>
+</form>

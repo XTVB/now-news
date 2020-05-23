@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { RootState } from 'app/store/interfaces';
 import { getPayloadForInstance, instanceOf } from 'app/store/utils';
 import { from } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import * as actions from './actions';
 
 @Injectable()
@@ -31,10 +31,17 @@ export class AuthEffects {
     catchError(createUnexpectedError)
   );
 
-  @Effect()
+  @Effect({ dispatch: false })
+  public readonly loginHandler = this.actions$.pipe(
+    instanceOf(actions.UserLogin),
+    switchMap(() =>  this.router.navigateByUrl('')),
+    catchError(createUnexpectedError)
+  );
+
+  @Effect({ dispatch: false })
   public readonly accessDeniedHandler = this.actions$.pipe(
     instanceOf(actions.AccessDeniedAction),
-    map(() =>  this.router.navigateByUrl('/login')),
+    switchMap(() =>  this.router.navigateByUrl('/login')),
     catchError(createUnexpectedError)
   );
 

@@ -14,14 +14,14 @@
 
 .footer-links, .copyright {
     font-family: "Maison Neue Book";
-    font-size: 16px;
+    font-size: px-to-vh(16px);
     color: #3C3E46;
     opacity: 0.4;
     line-height: 21px;
 }
 
 .footer-links {
-    margin-left: get-vw(165px);
+    margin-left: px-to-vw(165px);
     
     a {
         // have to overwrite native anchor behaviour
@@ -29,7 +29,7 @@
         text-decoration: none;
 
         &:not(:first-child) {
-            margin-left: get-vw(40px);
+            margin-left: px-to-vw(40px);
         }
 
         &:hover {
@@ -39,18 +39,20 @@
 }
 
 .social-links {
-    margin-left: get-vw(155px);
+    margin-left: px-to-vw(155px);
 
     a:not(:first-child) {
-        margin-left: get-vw(20px);
+        margin-left: px-to-vw(20px);
     }
 
-    img {
-        height: 22px;
+    mat-icon {
+        height: px-to-vh(22px);
+        width: px-to-vw(22px);
         vertical-align: middle;
     }
 }
 
 .copyright {
-    margin-left: get-vw(69px);
+    margin-left: px-to-vw(69px);
+    margin-right: px-to-vw(260px);
 }

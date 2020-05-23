@@ -23,6 +23,7 @@
     "@ngrx/effects": "^8.0.0",
     "@ngrx/store": "^8.0.0",
     "@mdi/font": "^4.5.95",
+    "pace-progress": "git+https://github.com/HubSpot/pace.git",
     "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.4",
     "oidc-client": "1.4.1",
