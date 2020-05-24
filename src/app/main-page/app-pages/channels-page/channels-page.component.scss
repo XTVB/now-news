@@ -1,0 +1,32 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+.sub-menu {
+  background-color: $white;
+  height: px-to-vh(60px);
+  padding: 0 px-to-vw(165px);
+
+  a {
+    min-width: unset;
+    width: px-to-vw(90px);
+    font-family: "Maison Neue Medium";
+    font-size: px-to-vh(16px);
+    font-weight: bold;
+    letter-spacing: 0;
+    color: $darkGrey;
+
+    &.mat-tab-label-active {
+      opacity: 1;
+      color: $brandPurple;
+    }
+  }
+
+  .divider {
+    margin-top: px-to-vh(8px);
+    margin-bottom: px-to-vh(8px);
+  }
+
+  .explore-button {
+    margin-left: px-to-vw(125px);
+  }
+}

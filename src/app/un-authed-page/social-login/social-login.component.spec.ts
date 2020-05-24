@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BaseTestModule } from 'app/base-test.module.spec';
+import { SocialLoginComponent } from "./social-login.component";
 
-import { SocialLoginComponent } from './social-login.component';
-
-describe('SocialLoginComponent', () => {
+describe("SocialLoginComponent", () => {
   let component: SocialLoginComponent;
   let fixture: ComponentFixture<SocialLoginComponent>;
 
   beforeEach(async(() => {
+    // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      declarations: [ SocialLoginComponent ]
-    })
-    .compileComponents();
+      imports: [BaseTestModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('SocialLoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

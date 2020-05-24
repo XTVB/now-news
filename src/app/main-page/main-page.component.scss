@@ -1,0 +1,30 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+.container {
+  background-color: $lightGrey;
+  width: 100%;
+  height: 100%;
+}
+
+.main-menu {
+  padding: 0 px-to-vw(164px);
+
+  mat-icon {
+    fill: $white;
+    // use vw for width and height so aspect ratio is maintained
+    height: px-to-vw(35px);
+    width: px-to-vw(20px);
+    padding-bottom: px-to-vh(15px);
+    margin-right: px-to-vw(40px);
+  }
+
+  now-menu-button:not(:last-child) {
+    margin-right: px-to-vw(25px);
+  }
+
+  now-search-input {
+    margin-left: auto;
+    margin-right: px-to-vw(20px);
+  }
+}

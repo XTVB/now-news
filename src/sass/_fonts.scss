@@ -1,35 +1,41 @@
-@import './variables';
+@import "./variables";
 
 @font-face {
-    font-family: "Maison Neue Medium";
-    src: url(#{$fonts-path}/MaisonNeue-Medium.otf);
+  font-family: "Maison Neue Medium";
+  src: url(#{$fonts-path}/MaisonNeue-Medium.otf);
 }
 
 @font-face {
-    font-family: "Maison Neue Book";
-    src: url(#{$fonts-path}/MaisonNeue-Book.otf);
+  font-family: "Maison Neue Book";
+  src: url(#{$fonts-path}/MaisonNeue-Book.otf);
 }
 
 @font-face {
-    font-family: "Maison Neue Demi";
-    src: url(#{$fonts-path}/MaisonNeue-Demi.otf);
+  font-family: "Maison Neue Book Italic";
+  src: url(#{$fonts-path}/MaisonNeue-BookItalic.otf);
 }
 
 @font-face {
-    font-family: "Eina 03 SemiBold"; 
-    src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.eot"); 
-    src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.woff2") format("woff2");
+  font-family: "Maison Neue Demi";
+  src: url(#{$fonts-path}/MaisonNeue-Demi.otf);
 }
 
 @font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), 
-         local('MaterialIcons-Regular'), 
-         url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
-  }
-  
-  .material-icons {
-    font-family: 'Material Icons';
-  }
+  font-family: "Eina 03 SemiBold";
+  src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.eot");
+  src: url("//db.onlinewebfonts.com/t/7aa69c481b407f30ed286cad3d58dcf2.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2)
+      format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+}

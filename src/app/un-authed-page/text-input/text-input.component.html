@@ -1,16 +1,18 @@
-<form [formGroup]="form" *ngIf="form">
-    <div class="password-input-field">
-        <mat-form-field 
-            appearance="fill"
-            color="primary"
-        >
-            <mat-label *ngIf="label">{{ label }}</mat-label>
-            <input 
-                matInput
-                [type]="hide ? 'password' : 'text'"
-                formControlName="value"
-            >
-            <mat-icon *ngIf="svgIcon" class="prefix-icon" matPrefix [svgIcon]="svgIcon"></mat-icon>
-        </mat-form-field>
-    </div>
+<form [formGroup]="form" *ngIf="form" (ngSubmit)="inputSubmit.emit()">
+  <div class="text-input-field">
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label *ngIf="label">{{ label }}</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="value"
+      />
+      <mat-icon
+        *ngIf="svgIcon"
+        class="prefix-icon"
+        matPrefix
+        [svgIcon]="svgIcon"
+      ></mat-icon>
+    </mat-form-field>
+  </div>
 </form>

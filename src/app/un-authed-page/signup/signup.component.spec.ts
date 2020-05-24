@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BaseTestModule } from "app/base-test.module.spec";
+import { SignupComponent } from "./signup.component";
 
-import { SignupComponent } from './signup.component';
-
-describe('SignupComponent', () => {
+describe("SignupComponent", () => {
   let component: SignupComponent;
   let fixture: ComponentFixture<SignupComponent>;
 
   beforeEach(async(() => {
+    // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      declarations: [ SignupComponent ]
-    })
-    .compileComponents();
+      imports: [BaseTestModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('SignupComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

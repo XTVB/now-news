@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BaseTestModule } from "app/base-test.module.spec";
+import { MainPageComponent } from "./main-page.component";
 
-import { MainPageComponent } from './main-page.component';
-
-describe('MainPageComponent', () => {
+describe("MainPageComponent", () => {
   let component: MainPageComponent;
   let fixture: ComponentFixture<MainPageComponent>;
 
   beforeEach(async(() => {
+    // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      declarations: [ MainPageComponent ]
-    })
-    .compileComponents();
+      imports: [BaseTestModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('MainPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

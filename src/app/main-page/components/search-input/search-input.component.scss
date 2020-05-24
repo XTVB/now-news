@@ -1,0 +1,38 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+.search-input-field {
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .prefix-icon {
+    height: px-to-vw(24px);
+    width: px-to-vw(23px);
+  }
+
+  .mat-form-field-appearance-fill {
+    .mat-form-field-infix {
+      border: 0;
+      padding: 0;
+
+      input {
+        font-family: "Eina 03 SemiBold";
+      }
+    }
+
+    .mat-form-field-flex {
+      width: 100%;
+      background-color: $brandPurple;
+      padding: 0;
+    }
+  }
+}

@@ -1,47 +1,52 @@
-@import './variables';
-@import './mixins';
-@import './fonts';
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
 @include mat-core();
 @include angular-material-theme($theme);
 
-
-// TODO move to its own file
 // Original theme source from: '~pace-progress/themes/orange/pace-theme-minimal.css';
 .pace {
-    -webkit-pointer-events: none;
-    pointer-events: none;
-  
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  
-    .pace-progress-inner {
-      box-shadow: none;
-    }
-  
-    .pace-activity {
-      top: 70px;
-    }
-  
-    .pace-progress {
-      background: mat-color($primary);
-      position: fixed;
-      z-index: 2000;
-      top: 0;
-      right: 100%;
-      width: 100%;
-      height: 3px;
-    }
-  
-    &.pace-inactive {
-      display: none;
-    }
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  .pace-progress-inner {
+    box-shadow: none;
   }
-  
 
+  .pace-activity {
+    top: 70px;
+  }
 
-// TODO find a better way to do this:
+  .pace-progress {
+    background: mat-color($primary);
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+  }
+
+  &.pace-inactive {
+    display: none;
+  }
+}
+
+// Global overrides
 .mat-button-wrapper {
-    line-height: initial;
-    display: block;
+  line-height: initial;
+  display: block;
+}
+
+.mat-tab-list {
+  display: flex;
+
+  .mat-tab-links {
+    display: flex;
+    align-self: center;
+  }
 }

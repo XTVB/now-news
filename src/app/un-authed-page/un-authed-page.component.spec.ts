@@ -1,28 +1,26 @@
-// /* tslint:disable:no-unused-variable */
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-// import { By } from '@angular/platform-browser';
-// import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BaseTestModule } from 'app/base-test.module.spec';
+import { UnAuthedPageComponent } from './un-authed-page.component';
 
-// import { UnAuthedPageComponent } from './un-authed-page.component';
+describe('UnAuthedPageComponent', () => {
+  let component: UnAuthedPageComponent;
+  let fixture: ComponentFixture<UnAuthedPageComponent>;
 
-// describe('LogInPageComponent', () => {
-//   let component: UnAuthedPageComponent;
-//   let fixture: ComponentFixture<UnAuthedPageComponent>;
+  beforeEach(async(() => {
+    // tslint:disable-next-line: no-floating-promises
+    TestBed.configureTestingModule({
+      imports: [BaseTestModule]
+    })
+    .compileComponents();
+  }));
 
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [ UnAuthedPageComponent ]
-//     })
-//     .compileComponents();
-//   }));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(UnAuthedPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(UnAuthedPageComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

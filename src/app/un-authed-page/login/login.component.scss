@@ -1,88 +1,51 @@
-@import 'src/sass/mixins';
-@import 'src/sass/variables';
+@import "src/sass/mixins";
+@import "src/sass/variables";
 
 .title {
-    margin-bottom: px-to-vh(34px);
+  margin-bottom: px-to-vh(34px);
 }
 
 .social-login {
-    display: flex;
-    margin-bottom: px-to-vh(30px);
+  display: flex;
+  margin-bottom: px-to-vh(30px);
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    .label {
-        // height: 19px;
-        color: $midGrey;
-        // width: px-to-vw(150px);
-        // TODO not %
-        width: 71.7703349%;
-        font-family: "Maison Neue Demi";
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0;
-        line-height: px-to-vh(19px);
-        margin-bottom: px-to-vh(15px);
+  .label {
+    color: $midGrey;
+    width: px-to-vw(150px);
+    font-family: "Maison Neue Demi";
+    font-size: px-to-vh(14px);
+    letter-spacing: 0;
+    line-height: px-to-vh(19px);
+    margin-bottom: px-to-vh(15px);
+  }
+
+  .login-button {
+    padding: px-to-vh(23px) 0;
+    margin-bottom: px-to-vh(20px);
+
+    span {
+      font-family: "Maison Neue Demi";
+      font-size: px-to-vh(18px);
+      letter-spacing: 0;
+      text-align: center;
     }
+  }
 
-    .text-input {
-        background-color: $white;
-        // border-radius: 4px;
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-        // padding-top: px-to-vh(23px);
-        // padding-bottom: px-to-vh(23px);
-        // padding-left: px-to-vw(20px);
-        margin-bottom: px-to-vh(10px);
+  .sign-up-redirect {
+    font-family: "Maison Neue Book";
+    font-size: px-to-vh(16px);
+    letter-spacing: 0;
+    margin-bottom: px-to-vh(26px);
 
-        mat-icon {
-            height: px-to-vh(24px);
-            width: px-to-vw(23px);
-            vertical-align: middle;
-            margin-right: px-to-vw(13px);
-        }
-    
-        // .mat-form-field {
-        //     padding: 0;
-        //     width: calc(100% - #{px-to-vw(56px)}); //13px left margin + 23px icon width + 20px left margin
-        //     box-sizing: border-box;
-        //     vertical-align: middle;
-        //     margin-left: px-to-vw(13px);
-        //     border: none;
-        //     font-family: "Maison Neue Medium";
-        //     font-size: px-to-vh(18px);
-        //     letter-spacing: 0;
-            
-        //     input {
-        //         width: 100%;
-        //     }
-        // }
+    a {
+      font-family: "Maison Neue Demi";
+      color: $brandPurple;
+      text-decoration: none;
     }
-
-    .login-button {
-        padding: px-to-vh(23px) 0;
-        margin-bottom: px-to-vh(20px);
-
-        span {
-            font-family: "Maison Neue Demi";
-            font-size: px-to-vh(18px);
-            letter-spacing: 0;
-            text-align: center;
-        }
-    }
-
-    .sign-up-redirect {
-        font-family: "Maison Neue Book";
-        font-size:  px-to-vh(16px);
-        letter-spacing: 0;
-        margin-bottom: px-to-vh(26px);
-
-        a {
-            font-family: "Maison Neue Demi";
-            color: $brandPurple;
-            text-decoration: none;
-        }
-    }
+  }
 }

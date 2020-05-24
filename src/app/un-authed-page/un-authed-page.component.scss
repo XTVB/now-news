@@ -1,17 +1,17 @@
-@import 'src/sass/mixins';
-@import 'src/sass/variables';
+@import "src/sass/mixins";
+@import "src/sass/variables";
 
 :host {
-    background-image: url('#{$images-path}/Illustration.svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: rgb(238, 238, 242);
-    height: 100%;
-    display: flex;
+  background-image: url("#{$images-path}/Illustration.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgb(238, 238, 242);
+  min-height: px-to-vh(796px);
+  display: flex;
 }
 
 .container {
-    background-color: rgb(238, 238, 242, 0.5);
-    padding-left: px-to-vw(165px);
-    width: px-to-vw(360px);
+  background-color: rgb(238, 238, 242, 0.5);
+  padding-left: px-to-vw(165px);
+  width: px-to-vw(360px);
 }

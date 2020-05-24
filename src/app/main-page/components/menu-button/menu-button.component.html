@@ -1,0 +1,4 @@
+<div *ngIf="title" class="container" [ngClass]="selected ? 'selected' : ''">
+  <mat-icon *ngIf="svgIcon" [svgIcon]="svgIcon"></mat-icon>
+  <span>{{ title }}</span>
+</div>

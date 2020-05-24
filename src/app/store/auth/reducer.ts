@@ -1,23 +1,25 @@
-import { Action } from '@ngrx/store';
-import * as actions from './actions';
-import { AuthState } from './interfaces';
+import { Action } from "@ngrx/store";
+import * as actions from "./actions";
+import { AuthState, dummyUser } from "./interfaces";
 
 const initialState: AuthState = {
-  loggedIn: false
+  loggedIn: false,
 };
 
 export function authReducer(state = initialState, action: Action): AuthState {
   if (action instanceof actions.UserLogin) {
     return {
       ...state,
-      loggedIn: true
+      loggedIn: true,
+      user: action.payload,
     };
   }
 
   if (action instanceof actions.UserLogout) {
     return {
       ...state,
-      loggedIn: false
+      loggedIn: false,
+      user: undefined,
     };
   }
 

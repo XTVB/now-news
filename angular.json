@@ -18,13 +18,10 @@
             "polyfills": "src/polyfills.ts",
             "assets": ["src/assets"],
             "styles": ["src/sass/styles.scss"],
-            "scripts": [
-              "node_modules/pace-progress/pace.min.js"
-            ]
+            "scripts": ["node_modules/pace-progress/pace.min.js"]
           },
           "configurations": {
-            "local-staging": {
-            },
+            "local-staging": {},
             "prod": {
               "optimization": true,
               "outputHashing": "all",
@@ -50,6 +47,20 @@
             "production": {
               "browserTarget": "now-news:build:production"
             }
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": ["node_modules/pace-progress/pace.min.js"],
+            "styles": [
+              "node_modules/pace-progress/themes/orange/pace-theme-minimal.css",
+              "src/styles/fonts.css",
+              "src/styles/app.scss"
+            ],
+            "assets": ["src/assets"]
           }
         }
       }

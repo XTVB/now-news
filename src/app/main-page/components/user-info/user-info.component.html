@@ -1,0 +1,4 @@
+<div class="container" *ngIf="loggedIn$ | async">
+  <img [src]="userProfile$ | async" />
+  <div class="username">{{ userName$ | async }}</div>
+</div>

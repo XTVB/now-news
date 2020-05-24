@@ -1,1 +1,40 @@
-<p>main-page works!</p>
+<div class="container">
+  <mat-toolbar class="main-menu" color="accent">
+    <mat-icon svgIcon="now-news"></mat-icon>
+    <now-menu-button
+      routerLink="/channels"
+      routerLinkActive
+      #channels="routerLinkActive"
+      [selected]="channels.isActive"
+      [svgIcon]="'channel'"
+      [title]="'CHANNELS'"
+    ></now-menu-button>
+    <now-menu-button
+      routerLink="/bookmarks"
+      routerLinkActive
+      #bookmarks="routerLinkActive"
+      [selected]="bookmarks.isActive"
+      [svgIcon]="'bookmark'"
+      [title]="'BOOKMARKS'"
+    ></now-menu-button>
+    <now-menu-button
+      routerLink="/overview"
+      routerLinkActive
+      #overview="routerLinkActive"
+      [selected]="overview.isActive"
+      [svgIcon]="'overview'"
+      [title]="'OVERVIEW'"
+    ></now-menu-button>
+    <now-menu-button
+      routerLink="/widgets"
+      routerLinkActive
+      #widgets="routerLinkActive"
+      [selected]="widgets.isActive"
+      [svgIcon]="'overview'"
+      [title]="'WIDGETS'"
+    ></now-menu-button>
+    <now-search-input></now-search-input>
+    <now-user-info></now-user-info>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>

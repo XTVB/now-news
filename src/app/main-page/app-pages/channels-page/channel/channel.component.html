@@ -1,0 +1,5 @@
+<ng-container *ngIf="channelOverviews$ | async as overviews">
+  <ng-container *ngFor="let overview of overviews">
+    <now-content-overview [contentOverview]="overview"></now-content-overview>
+  </ng-container>
+</ng-container>

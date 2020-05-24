@@ -1,34 +1,51 @@
-import { Component, forwardRef, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { ControlValueAccessor, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { groupFor, TypedFormGroup } from 'app/store/utils/forms';
-import { Subject } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import {
+  Component,
+  EventEmitter,
+  forwardRef,
+  Input,
+  OnDestroy,
+  Output,
+  ViewEncapsulation,
+} from "@angular/core";
+import {
+  ControlValueAccessor,
+  FormBuilder,
+  NG_VALUE_ACCESSOR,
+} from "@angular/forms";
+import { groupFor, TypedFormGroup } from "app/store/utils/forms";
+import { Subject } from "rxjs";
+import { map, takeUntil } from "rxjs/operators";
 
 interface TextFieldForm {
   value: string;
 }
 
 @Component({
-  selector: 'now-text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss'],
+  selector: "now-text-input",
+  templateUrl: "./text-input.component.html",
+  styleUrls: ["./text-input.component.scss"],
   // tslint:disable-next-line:use-component-view-encapsulation
   encapsulation: ViewEncapsulation.None,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => TextInputComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class TextInputComponent implements ControlValueAccessor, OnDestroy {
+  @Output()
+  private readonly inputSubmit = new EventEmitter();
 
   private readonly ngUnsubscribe = new Subject();
 
-  public form: TypedFormGroup<TextFieldForm> = groupFor<TextFieldForm>(this.fb, {
-    value: ''
-  });
+  public form: TypedFormGroup<TextFieldForm> = groupFor<TextFieldForm>(
+    this.fb,
+    {
+      value: "",
+    }
+  );
 
   @Input()
   public svgIcon?: string;
@@ -48,7 +65,7 @@ export class TextInputComponent implements ControlValueAccessor, OnDestroy {
 
   public writeValue(newValue: string | undefined): void {
     this.form.reset({
-      value: newValue
+      value: newValue,
     });
   }
 
@@ -67,5 +84,4 @@ export class TextInputComponent implements ControlValueAccessor, OnDestroy {
   protected getFormValue() {
     return this.form.value && this.form.value.value;
   }
-
 }

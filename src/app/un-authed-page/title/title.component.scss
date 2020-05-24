@@ -1,33 +1,35 @@
-@import 'src/sass/mixins';
+@import "src/sass/mixins";
+@import "src/sass/variables";
 
 :host {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 mat-icon {
-    height: px-to-vh(60px);
-    width: px-to-vw(31px);
-    margin-top: px-to-vh(38px);
+  fill: $brandPurple;
+  height: px-to-vh(60px);
+  width: px-to-vw(31px);
+  margin-top: px-to-vh(38px);
 }
 
 .title {
-    font-family: "Eina 03 SemiBold";
-    color: #3C3E46;
-    font-size: px-to-vh(46px);
-    font-weight: 600;
-    letter-spacing: -1.7px;
-    line-height: 64px;
-    width: px-to-vw(255px);
-    margin-top: px-to-vh(32px);
+  font-family: "Eina 03 SemiBold";
+  color: #3c3e46;
+  font-size: px-to-vh(46px);
+  font-weight: 600;
+  letter-spacing: -1.7px;
+  line-height: 64px;
+  width: px-to-vw(255px);
+  margin-top: px-to-vh(32px);
 }
 
 .sub-title {
-    color: #3C3E46;
-    font-family: "Maison Neue Book";
-    font-size: px-to-vh(18px);
-    letter-spacing: 0;
-    line-height: px-to-vh(24px);
-    width: px-to-vw(214px);
-    margin-top: px-to-vh(9px);
+  color: #3c3e46;
+  font-family: "Maison Neue Book";
+  font-size: px-to-vh(18px);
+  letter-spacing: 0;
+  line-height: px-to-vh(24px);
+  width: px-to-vw(214px);
+  margin-top: px-to-vh(9px);
 }

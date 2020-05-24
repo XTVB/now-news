@@ -1,68 +1,113 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AuthorizationGuard } from './store/auth/authorization.guard';
-import { LoginComponent } from './un-authed-page/login/login.component';
-import { NotFoundComponent } from './un-authed-page/not-found/not-found.component';
-import { SignupComponent } from './un-authed-page/signup/signup.component';
-import { UnAuthedPageComponent } from './un-authed-page/un-authed-page.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { BookmarksPageComponent } from "./main-page/app-pages/bookmarks-page/bookmarks-page.component";
+import { ChannelComponent } from "./main-page/app-pages/channels-page/channel/channel.component";
+import { ChannelsPageComponent } from "./main-page/app-pages/channels-page/channels-page.component";
+import { NewsArticleComponent } from "./main-page/app-pages/channels-page/news-article/news-article.component";
+import { OverviewPageComponent } from "./main-page/app-pages/overview-page/overview-page.component";
+import { WidgetsPageComponent } from "./main-page/app-pages/widgets-page/widgets-page.component";
+import { MainPageComponent } from "./main-page/main-page.component";
+import { AuthorizationGuard } from "./store/auth/authorization.guard";
+import { LoginComponent } from "./un-authed-page/login/login.component";
+import { NotFoundComponent } from "./un-authed-page/not-found/not-found.component";
+import { SignupComponent } from "./un-authed-page/signup/signup.component";
+import { UnAuthedPageComponent } from "./un-authed-page/un-authed-page.component";
 
 const authedRoutes: Routes = [
   {
-    path: '',
+    path: "",
     data: {
-      requiresLogin: true
+      requiresLogin: true,
     },
     component: MainPageComponent,
-    // resolve: {
-    //   dataLoaded: ReservationLogsAccountLevelResolverService
-    // }
-    children: []
-  }
+    children: [
+      {
+        path: "",
+        redirectTo: "channels",
+        pathMatch: "full",
+      },
+      {
+        path: "channels",
+        component: ChannelsPageComponent,
+        children: [
+          {
+            path: "",
+            redirectTo: "explore",
+            pathMatch: "full",
+          },
+          {
+            path: "trending",
+            component: NewsArticleComponent,
+            children: [],
+          },
+          {
+            path: ":channelName",
+            component: ChannelComponent,
+            children: [],
+          },
+        ],
+      },
+      {
+        path: "bookmarks",
+        component: BookmarksPageComponent,
+        children: [],
+      },
+      {
+        path: "overview",
+        component: OverviewPageComponent,
+        children: [],
+      },
+      {
+        path: "widgets",
+        component: WidgetsPageComponent,
+        children: [],
+      },
+    ],
+  },
 ];
 
 const unAuthedRoutes: Routes = [
   {
-    path: '',
+    path: "",
     component: UnAuthedPageComponent,
     children: [
       {
-        path: 'login',
+        path: "login",
         component: LoginComponent,
-        children: []
+        children: [],
       },
       {
-        path: 'signup',
+        path: "signup",
         component: SignupComponent,
-        children: []
+        children: [],
       },
       {
-        path: '404',
+        path: "404",
         component: NotFoundComponent,
-        children: []
-      }
-    ]
-  }
+        children: [],
+      },
+    ],
+  },
 ];
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     canActivateChild: [AuthorizationGuard],
     children: [
       ...authedRoutes,
       ...unAuthedRoutes,
       {
-        path: '**',
-        redirectTo: '/404'
-      }
-    ]
-  }
+        path: "**",
+        redirectTo: "/404",
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthorizationGuard]
+  providers: [AuthorizationGuard],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,15 @@
+@import "src/sass/mixins";
+
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: px-to-vh(15px) px-to-vw(165px) px-to-vh(60px);
+  overflow: auto;
+
+  now-content-overview {
+    margin-bottom: px-to-vh(60px);
+  }
+}

@@ -1,0 +1,83 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: px-to-vw(350px);
+  background-color: $white;
+  border-radius: 5px;
+
+  > img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    padding: px-to-vh(15px) px-to-vw(30px) px-to-vh(30px);
+
+    .details-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: px-to-vh(24px);
+
+      .heading {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-family: "Eina 03 SemiBold";
+          font-size: px-to-vh(26px);
+          margin-bottom: px-to-vh(5px);
+        }
+
+        .sub-title {
+          font-family: "Maison Neue Book";
+          font-size: px-to-vh(16px);
+          color: $darkGrey;
+        }
+      }
+
+      .users {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          width: px-to-vw(40px);
+          height: px-to-vw(40px);
+        }
+      }
+    }
+
+    .toggle-button {
+      margin-right: auto;
+      border-radius: 100px;
+      border: 2px solid $brandPurple;
+      padding: px-to-vh(11px) px-to-vw(36px);
+
+      span {
+        font-family: "Maison Neue Demi";
+        font-size: px-to-vh(18px);
+        letter-spacing: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.toggle-button.selected {
+  background-color: $lightGrey;
+
+  span {
+    color: $brandPurple;
+    font-family: "Maison Neue Demi";
+    font-size: px-to-vh(18px);
+    letter-spacing: 0;
+    text-align: center;
+  }
+}

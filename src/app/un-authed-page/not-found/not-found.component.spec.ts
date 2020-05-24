@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BaseTestModule } from "app/base-test.module.spec";
+import { NotFoundComponent } from "./not-found.component";
 
-import { NotFoundComponent } from './not-found.component';
-
-describe('NotFoundComponent', () => {
+describe("NotFoundComponent", () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;
 
   beforeEach(async(() => {
+    // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      declarations: [ NotFoundComponent ]
-    })
-    .compileComponents();
+      imports: [BaseTestModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('NotFoundComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -73,7 +73,12 @@
       }
     ],
     "typedef": false,
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
     "template-banana-in-box": true,
     "contextual-lifecycle": true,
     "contextual-decorator": true,

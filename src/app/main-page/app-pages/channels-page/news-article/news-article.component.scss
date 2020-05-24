@@ -1,0 +1,127 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+.container {
+  background-color: $white;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+
+  > img {
+    width: 50%;
+  }
+}
+
+.header {
+  background-image: url("/assets/images/content/iceberg-header.jpg");
+  // Tint image darker so white text is  more legible
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding: px-to-vh(283px) px-to-vw(165px) px-to-vh(50px);
+  justify-content: space-between;
+  align-items: baseline;
+
+  .heading {
+    width: px-to-vw(700px);
+    color: $white;
+
+    .title {
+      font-family: "Eina 03 SemiBold";
+      font-size: px-to-vh(42px);
+      letter-spacing: -1.55px;
+    }
+
+    .sub-title {
+      font-family: "Maison Neue Medium";
+      font-size: px-to-vh(18px);
+
+      > div:not(:last-child) {
+        margin-right: px-to-vw(40px);
+      }
+    }
+  }
+
+  .controls {
+    button {
+      height: px-to-vw(60px);
+      width: px-to-vw(60px);
+
+      mat-icon {
+        width: unset;
+        font-size: px-to-vw(24px);
+        color: $brandPurple;
+        fill: $brandPurple;
+      }
+
+      &:not(:last-child) {
+        margin-right: px-to-vw(30px);
+      }
+
+      .mirror {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}
+
+.align-center {
+  font-family: "Maison Neue Book";
+  font-size: px-to-vh(20px);
+  line-height: px-to-vh(45px);
+  color: $darkGrey;
+  padding: px-to-vh(79px) px-to-vw(260px);
+}
+
+.quote-container {
+  padding: px-to-vh(65px) px-to-vw(260px) 0 px-to-vw(100px);
+  color: $brandPurple;
+
+  .quotation-mark {
+    font-family: "Maison Neue Book Italic";
+    font-size: px-to-vh(100px);
+    line-height: px-to-vh(133px);
+    font-style: italic;
+    letter-spacing: 0;
+  }
+
+  .quote {
+    font-family: "Maison Neue Demi";
+    font-size: px-to-vh(20px);
+    line-height: px-to-vh(50px);
+  }
+}
+
+.paragraph-container {
+  padding: px-to-vh(65px) px-to-vw(100px) 0 px-to-vw(260px);
+  color: $darkGrey;
+
+  .sub-heading {
+    font-family: "Eina 03 SemiBold";
+    font-size: px-to-vh(24px);
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    line-height: px-to-vh(40px);
+    margin-bottom: px-to-vh(12px);
+  }
+
+  .paragraph {
+    font-family: "Maison Neue Book";
+    font-size: px-to-vh(20px);
+    line-height: px-to-vh(45px);
+  }
+}
+
+.video-link {
+  > img {
+    width: 100%;
+    // height: px-to-vh(482px);
+  }
+}

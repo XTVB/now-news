@@ -1,0 +1,25 @@
+<ng-container *ngIf="contentOverview">
+  <img [src]="contentOverview.imgSrc" />
+  <div>
+    <div class="details-container">
+      <div [routerLink]="contentOverview.routerLink" class="heading">
+        <div class="title">{{ contentOverview.title }}</div>
+        <div class="sub-title">{{ contentOverview.subtitle }}</div>
+      </div>
+      <div class="users">
+        <ng-container *ngFor="let user of contentOverview.users">
+          <img [matTooltip]="user.username" [src]="user.profileImgSrc" />
+        </ng-container>
+      </div>
+    </div>
+    <button
+      mat-flat-button
+      color="accent"
+      class="toggle-button"
+      [ngClass]="contentOverview.selected ? 'selected' : ''"
+      (click)="toggleSelected(contentOverview.id)"
+    >
+      <span>{{ contentOverview.selected ? "Following" : "Follow" }}</span>
+    </button>
+  </div>
+</ng-container>

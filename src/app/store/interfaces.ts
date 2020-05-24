@@ -1,5 +1,7 @@
-import { AuthState } from './auth/interfaces';
+import { AuthState } from "./auth/interfaces";
+import { ContentState } from "./content/interfaces";
 
 export interface RootState {
-    authState: AuthState;
+  authState: AuthState;
+  contentState: ContentState;
 }

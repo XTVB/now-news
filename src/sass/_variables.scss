@@ -1,36 +1,31 @@
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
-$darkGrey: #3C3E46;
-$midGrey: #84889A;
-$midGrey1: rgba(132, 136, 154, 0.658);
-$brandPurple: #6648CD;
-$white: #FFFFFF;
-$lightGrey: #EEEEF2;
+$darkGrey: #3c3e46;
+$midGrey: #84889a;
+$brandPurple: #6648cd;
+$greyPurple: #d1c8f0;
+$white: #ffffff;
+$lightGrey: #eeeef2;
 
-$primary: (
-    lighter: $lightGrey,
+$primary: map_merge(
+  mat-palette($mat-grey),
+  (
     default: $white,
-    text: $darkGrey,
-    darker: $midGrey,
-    default-contrast: $darkGrey
+  )
 );
 
-// TODO other themes
-$s2_lighter: #ffbf6b;
-$s2_original: #f19722;
-$s2_text: #ec8600;
-$s2_darker: #d87a00;
-
-$accent: (
-    lighter: $white,
+$accent: map_merge(
+  mat-palette($mat-deep-purple),
+  (
     default: $brandPurple,
-    text: $white,
-    darker: $s2_darker,
-    default-contrast: white
+  )
 );
 
-$theme: mat-light-theme($primary, $accent, $accent);
+$warn: mat-palette($mat-red);
 
-$assets-path: '/assets';
-$fonts-path: '#{$assets-path}/fonts/maisonNeue';
-$images-path: '#{$assets-path}/images';
+$theme: mat-light-theme($primary, $accent, $warn);
+
+$assets-path: "/assets";
+$fonts-path: "#{$assets-path}/fonts/maisonNeue";
+$images-path: "#{$assets-path}/images";
+$footerHeight: px-to-vh(104px);

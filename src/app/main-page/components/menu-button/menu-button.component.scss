@@ -1,0 +1,31 @@
+@import "src/sass/variables";
+@import "src/sass/mixins";
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+mat-icon {
+  width: px-to-vw(22px);
+  margin-right: px-to-vw(20px);
+  fill: $greyPurple;
+
+  .selected & {
+    fill: $white;
+  }
+}
+
+span {
+  font-family: "Eina 03 SemiBold";
+  font-size: px-to-vh(14px);
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: px-to-vh(20px);
+  color: $greyPurple;
+
+  .selected & {
+    color: $white;
+  }
+}

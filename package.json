@@ -6,7 +6,9 @@
   "scripts": {
     "now-ng": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng",
     "build": "npm run now-ng -- build --aot",
-    "start": "npm run now-ng -- serve --host app.now.local"
+    "start": "npm run now-ng -- serve",
+    "format": "prettier --write \"src/**/*.{ts,js,css,scss,json,html}\" \"*.{ts,js,css,scss,json,html}\"",
+    "test": "ng test -- -w 5"
   },
   "private": true,
   "dependencies": {
@@ -44,11 +46,11 @@
     "babel-preset-env": "^1.6.1",
     "jest": "^24.0.0",
     "jest-preset-angular": "^7.0.0",
+    "prettier": "^2.0.2",
     "rxjs-tslint-rules": "^4.23.1",
     "tslint-eslint-rules": "^5.0.0",
     "tslint-microsoft-contrib": "^6.0.0",
     "angular-tslint-rules": "^1.5.0",
-    "codelyzer": "^5.0.1",
     "core-js": "^3.0.0",
     "ts-node": "^8.0.2",
     "tslint": "^5.6.0",
