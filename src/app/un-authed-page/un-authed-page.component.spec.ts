@@ -1,17 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BaseTestModule } from 'app/base-test.module.spec';
-import { UnAuthedPageComponent } from './un-authed-page.component';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BaseTestModule } from "app/base-test.module.spec";
+import { UnAuthedPageComponent } from "./un-authed-page.component";
 
-describe('UnAuthedPageComponent', () => {
+describe("UnAuthedPageComponent", () => {
   let component: UnAuthedPageComponent;
   let fixture: ComponentFixture<UnAuthedPageComponent>;
 
   beforeEach(async(() => {
     // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      imports: [BaseTestModule]
-    })
-    .compileComponents();
+      imports: [BaseTestModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,7 +19,7 @@ describe('UnAuthedPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

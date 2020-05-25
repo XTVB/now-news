@@ -1,0 +1,13 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+.flex-row {
+  > img {
+    width: px-to-vw(60px);
+    width: px-to-vw(60px);
+  }
+
+  :not(:last-child) {
+    margin-right: px-to-vw(20px);
+  }
+}

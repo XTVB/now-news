@@ -30,7 +30,15 @@ export interface NewsItem {
   overviewImgSrc: string;
   bookmarked: boolean;
   routerLink: string;
-  // content: string[];
+}
+
+export interface NewsComment {
+  id: string;
+  user: User;
+  message: string;
+  likes: number;
+  date: string;
+  liked: boolean;
 }
 
 export interface ContentState {
@@ -40,7 +48,11 @@ export interface ContentState {
   newsItems: {
     [id: string]: NewsItem;
   };
+  newsComments: {
+    [id: string]: NewsComment;
+  };
   displayedIds: string[];
+  displayedComments: string[];
 }
 
 export interface ContentOverview {

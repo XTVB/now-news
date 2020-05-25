@@ -10,11 +10,32 @@ const getDisplayedIds = createSelector(
   (state) => state.displayedIds
 );
 
+const getDisplayedCommentIds = createSelector(
+  getContentState,
+  (state) => state.displayedComments
+);
+
 const getChannels = createSelector(getContentState, (state) => state.channels);
 
 const getNewsItems = createSelector(
   getContentState,
   (state) => state.newsItems
+);
+
+const getNewsComments = createSelector(
+  getContentState,
+  (state) => state.newsComments
+);
+
+export const getDisplayedNewsComments = createSelector(
+  getDisplayedCommentIds,
+  getNewsComments,
+  (ids, comments) => ids.map((id) => comments[id]).filter(isDefined)
+);
+
+export const getNewsCommentsAmount = createSelector(
+  getDisplayedNewsComments,
+  (state) => state.length
 );
 
 export const getChannelContentOverviews = createSelector(

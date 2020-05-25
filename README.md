@@ -34,6 +34,12 @@ By default component styles are encapsulated so that they only affect the releva
 
 'Explore' page channel view implemented in such a way that the same reusable components can be used to show overviews of news articles and the infrastructure to do this is already implemented. In a real app the page ID would be sent to the server which would return you the correct items in the contentState to display;
 
+Clicking on the title directs you to the tab for that channel (which in a real app would show you a similar view populated by the relevant news articles instead). Hovering over the users shows you their username.
+
 ## Utils
 
 Leveraging the power of typescript generics to allow type checking for ngRx and other convenience methods.
+
+## Incomplete Tasks
+
+Due to time constraints comments component is incomplete, basic visual structure has been implemented but no sorting or adding new comments works, and there may be some bugs.

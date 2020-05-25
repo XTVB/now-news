@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 import * as actions from "./actions";
-import { AuthState, dummyUser } from "./interfaces";
+import { AuthState } from "./interfaces";
 
 const initialState: AuthState = {
   loggedIn: false,

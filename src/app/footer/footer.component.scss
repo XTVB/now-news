@@ -18,7 +18,7 @@
 .copyright {
   font-family: "Maison Neue Book";
   font-size: px-to-vh(16px);
-  color: #3c3e46;
+  color: $darkGrey;
   opacity: 0.4;
   line-height: 21px;
 }
@@ -28,7 +28,7 @@
 
   a {
     // have to overwrite native anchor behaviour
-    color: #3c3e46;
+    color: $darkGrey;
     text-decoration: none;
 
     &:not(:first-child) {

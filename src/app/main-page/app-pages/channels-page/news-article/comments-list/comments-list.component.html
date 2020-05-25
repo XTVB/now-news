@@ -1,0 +1,11 @@
+<mat-toolbar color="accent">
+  <div class="count">{{ commentsCount$ | async }} COMMENTS</div>
+</mat-toolbar>
+<div class="comments-container">
+  <div class="comments" *ngIf="commentsList$ | async as commentsList">
+    <ng-container *ngFor="let comment of commentsList">
+      <now-comment [comment]="comment"></now-comment>
+    </ng-container>
+  </div>
+  <now-comment-input></now-comment-input>
+</div>

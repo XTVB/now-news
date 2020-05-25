@@ -15,7 +15,7 @@ mat-icon {
 
 .title {
   font-family: "Eina 03 SemiBold";
-  color: #3c3e46;
+  color: $darkGrey;
   font-size: px-to-vh(46px);
   font-weight: 600;
   letter-spacing: -1.7px;
@@ -25,7 +25,7 @@ mat-icon {
 }
 
 .sub-title {
-  color: #3c3e46;
+  color: $darkGrey;
   font-family: "Maison Neue Book";
   font-size: px-to-vh(18px);
   letter-spacing: 0;

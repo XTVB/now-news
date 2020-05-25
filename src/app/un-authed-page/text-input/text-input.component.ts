@@ -36,7 +36,7 @@ interface TextFieldForm {
 })
 export class TextInputComponent implements ControlValueAccessor, OnDestroy {
   @Output()
-  private readonly inputSubmit = new EventEmitter();
+  public readonly inputSubmit = new EventEmitter();
 
   private readonly ngUnsubscribe = new Subject();
 

@@ -5,3 +5,9 @@ export class ToggleChannelFollowedState implements Action {
 
   constructor(public readonly id: string) {}
 }
+
+export class ToggleCommentLikedState implements Action {
+  public readonly type = "[Content] Toggle Comment Follow State";
+
+  constructor(public readonly id: string) {}
+}

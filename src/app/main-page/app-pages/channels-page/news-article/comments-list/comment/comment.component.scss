@@ -1,0 +1,67 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+:host {
+  > .flex-row {
+    width: 100%;
+    border-radius: 4px;
+    padding: px-to-vh(20px) px-to-vw(35px);
+    background-color: $white;
+    align-items: center;
+
+    > img {
+      width: px-to-vw(60px);
+      width: px-to-vw(60px);
+      margin-right: px-to-vw(20px);
+    }
+
+    > .flex-column {
+      .username {
+        color: $darkGrey;
+        font-family: "Maison Neue Demi";
+        font-size: px-to-vh(18px);
+        letter-spacing: 0;
+        line-height: px-to-vh(24px);
+        margin-bottom: px-to-vh(8px);
+      }
+
+      .message {
+        color: $darkGrey;
+        font-family: "Maison Neue Book";
+        font-size: px-to-vh(20px);
+        letter-spacing: 0;
+        line-height: px-to-vh(32px);
+        margin-bottom: px-to-vh(22px);
+      }
+
+      > .flex-row {
+        align-items: center;
+
+        button {
+          font-size: px-to-vh(20px);
+          margin-right: px-to-vw(30px);
+
+          mat-icon {
+            margin-right: px-to-vw(5px);
+          }
+
+          span {
+            color: $darkGrey;
+            font-family: "Maison Neue Demi";
+            font-size: px-to-vh(18px);
+            letter-spacing: 0;
+            line-height: px-to-vh(24px);
+          }
+        }
+
+        .date {
+          color: $darkGrey;
+          font-family: "Maison Neue Medium";
+          font-size: px-to-vh(18px);
+          letter-spacing: 0;
+          line-height: px-to-vh(24px);
+        }
+      }
+    }
+  }
+}

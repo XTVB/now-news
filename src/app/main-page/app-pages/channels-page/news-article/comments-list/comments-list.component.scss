@@ -1,0 +1,26 @@
+@import "src/sass/mixins";
+@import "src/sass/variables";
+
+mat-toolbar {
+  padding: px-to-vh(44px) px-to-vw(165px);
+
+  .count {
+    font-family: "Eina 03 SemiBold";
+    font-size: px-to-vh(24px);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: px-to-vh(33px);
+  }
+}
+
+.comments-container {
+  background-color: $lightGrey;
+  padding: px-to-vh(60px) px-to-vw(260px);
+
+  .comments {
+    > now-comment {
+      display: flex;
+      margin-bottom: px-to-vh(20px);
+    }
+  }
+}

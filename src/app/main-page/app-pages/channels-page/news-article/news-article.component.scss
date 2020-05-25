@@ -5,15 +5,7 @@
   background-color: $white;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
 .flex-row {
-  display: flex;
-  flex-direction: row;
-
   > img {
     width: 50%;
   }
@@ -45,6 +37,14 @@
 
       > div:not(:last-child) {
         margin-right: px-to-vw(40px);
+      }
+
+      .channel {
+        > span {
+          background-color: $darkGrey;
+          border-radius: 15px;
+          padding: px-to-vw(5px) px-to-vw(10px);
+        }
       }
     }
   }
@@ -120,8 +120,9 @@
 }
 
 .video-link {
+  display: flex;
+
   > img {
     width: 100%;
-    // height: px-to-vh(482px);
   }
 }

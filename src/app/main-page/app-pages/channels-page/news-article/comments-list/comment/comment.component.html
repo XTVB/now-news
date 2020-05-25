@@ -1,0 +1,27 @@
+<ng-container *ngIf="comment">
+  <div class="flex-row">
+    <img [src]="comment.user.profileImgSrc" />
+    <div class="flex-column">
+      <div class="username">{{ comment.user.username }}</div>
+      <div class="message">{{ comment.message }}</div>
+      <div class="flex-row">
+        <button
+          mat-icon-button
+          color="warn"
+          class="toggle-button"
+          [ngClass]="comment.liked ? 'selected' : ''"
+          (click)="toggleLiked(comment.id)"
+        >
+          <mat-icon>{{
+            comment.liked ? "favorite" : "favorite_border"
+          }}</mat-icon
+          ><span>{{ comment.likes }}</span>
+        </button>
+        <div class="date">
+          <mat-icon>calendar_today</mat-icon>
+          <span>{{ comment.date }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

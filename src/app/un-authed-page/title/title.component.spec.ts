@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { BaseTestModule } from 'app/base-test.module.spec';
+import { BaseTestModule } from "app/base-test.module.spec";
 import { TitleComponent } from "./title.component";
 
 describe("TitleComponent", () => {
@@ -9,7 +9,7 @@ describe("TitleComponent", () => {
   beforeEach(async(() => {
     // tslint:disable-next-line: no-floating-promises
     TestBed.configureTestingModule({
-      imports: [BaseTestModule]
+      imports: [BaseTestModule],
     }).compileComponents();
   }));
 

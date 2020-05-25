@@ -38,6 +38,9 @@ import { SocialLoginComponent } from "./un-authed-page/social-login/social-login
 import { TextInputComponent } from "./un-authed-page/text-input/text-input.component";
 import { TitleComponent } from "./un-authed-page/title/title.component";
 import { UnAuthedPageComponent } from "./un-authed-page/un-authed-page.component";
+import { CommentsListComponent } from "./main-page/app-pages/channels-page/news-article/comments-list/comments-list.component";
+import { CommentComponent } from "./main-page/app-pages/channels-page/news-article/comments-list/comment/comment.component";
+import { CommentInputComponent } from "./main-page/app-pages/channels-page/news-article/comments-list/comment-input/comment-input.component";
 
 const materialModules = [
   MatButtonModule,
@@ -74,6 +77,9 @@ const materialModules = [
     SearchInputComponent,
     ChannelComponent,
     NewsArticleComponent,
+    CommentsListComponent,
+    CommentComponent,
+    CommentInputComponent,
   ],
   imports: [
     ...materialModules,

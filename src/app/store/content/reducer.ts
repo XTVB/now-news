@@ -1,7 +1,7 @@
 import { Action } from "@ngrx/store";
 import { dummyUser } from "../auth/interfaces";
 import * as actions from "./actions";
-import { Channel, ContentState } from "./interfaces";
+import { Channel, ContentState, NewsComment } from "./interfaces";
 import { isDefined } from "../utils";
 
 const imagePath = "/assets/images/content/";
@@ -74,10 +74,39 @@ const dummyChannels: {
   },
 };
 
+const dummyComments = {
+  0: {
+    id: "0",
+    user: dummyUser,
+    message: "Such a massive change in such a short time is extremely unsual.",
+    likes: 12,
+    date: "20 days ago",
+    liked: true,
+  },
+  1: {
+    id: "1",
+    user: dummyUser,
+    message: "Such a massive change in such a short time is extremely unsual.",
+    likes: 4,
+    date: "4 days ago",
+    liked: false,
+  },
+  2: {
+    id: "2",
+    user: dummyUser,
+    message: "Such a massive change in such a short time is extremely unsual.",
+    likes: 3,
+    date: "Yesterday",
+    liked: true,
+  },
+};
+
 const initialState: ContentState = {
   channels: dummyChannels,
   newsItems: {},
   displayedIds: ["cooking", "nature", "travel", "science", "climate", "music"],
+  newsComments: dummyComments,
+  displayedComments: ["0", "1", "2"],
 };
 
 export function contentReducer(
@@ -96,6 +125,24 @@ export function contentReducer(
             [id]: {
               ...state.channels[id],
               followed: !state.channels[id].followed,
+            },
+          },
+        }
+      : state;
+  }
+
+  if (action instanceof actions.ToggleCommentLikedState) {
+    const { id } = action;
+
+    // make sure comment exists
+    return isDefined(state.newsComments[id])
+      ? {
+          ...state,
+          newsComments: {
+            ...state.newsComments,
+            [id]: {
+              ...state.newsComments[id],
+              liked: !state.newsComments[id].liked,
             },
           },
         }
