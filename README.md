@@ -39,7 +39,3 @@ Clicking on the title directs you to the tab for that channel (which in a real a
 ## Utils
 
 Leveraging the power of typescript generics to allow type checking for ngRx and other convenience methods.
-
-## Incomplete Tasks
-
-Due to time constraints comments component is incomplete, basic visual structure has been implemented but no sorting or adding new comments works, and there may be some bugs.
